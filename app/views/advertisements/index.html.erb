@@ -1,0 +1,12 @@
+<h1>Fredslist</h1>
+<p>(Like Craigslist...but with Fred)</p>
+
+<% @advertisements.each do |ad| %>
+  <div class="media">
+    <div class="media-body">
+      <div class="media-heading">
+        <%= link_to "#{ad.title}: $#{ad.price}", ad %>
+      </div>
+    </div>
+  </div>
+<% end %>
