@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'welcome/faq' => 'welcome#faq'
 
   resources :posts
+  resources :questions
 
 
 end
