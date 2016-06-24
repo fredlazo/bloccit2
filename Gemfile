@@ -3,13 +3,11 @@
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '4.2.5'
 
- # #1
  group :production do
    gem 'pg'
    gem 'rails_12factor'
  end
 
- # #2
  group :development do
    gem 'sqlite3'
  end
@@ -20,6 +18,9 @@
  end
 
  gem 'bootstrap-sass'
+
+ # Used for encrypting User passwords
+ gem 'bcrypt'
 
  # Use SCSS for stylesheets
  gem 'sass-rails', '~> 5.0'
