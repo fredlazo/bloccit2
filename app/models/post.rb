@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
+  has_many :labelings, as: :labelable
+  has_many :labels, through: :labelings  
   belongs_to :topic
   belongs_to :user
   validates :title, length: { minimum: 5 }, presence: true
@@ -7,5 +9,5 @@ class Post < ActiveRecord::Base
   validates :topic, presence: true
   validates :user, presence: true
 
-   default_scope { order('created_at DESC') }  
+   default_scope { order('created_at DESC') }
 end
