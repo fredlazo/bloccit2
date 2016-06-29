@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Favorite, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:topic) { create(:topic) }
+  let(:user) { create(:user) }
+  let(:post) { create(:post) }
+  let(:favorite) { Vote.create!(post: post, user: user) }  
 end
